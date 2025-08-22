@@ -1,0 +1,37 @@
+:root{
+  --html-font-size: 24px;
+
+  --color-white: #fff;
+  --bg-main: #0E0E0E;
+  --bg-gradient: linear-gradient(180deg, rgba(14, 14, 14, 0.50) 0%, rgba(14, 14, 14, 0.00) 100%);
+  --link-bg: #ffffff1a;
+  --link-color: #FF5A00;
+
+  $screen-xs: 767px;
+  $screen-s: 992px;
+  $screen-m: 1200px;
+  $screen-l: 1920px;
+
+  --zi-header: 10;
+  --zi-burger: 9;
+  --zi-low: 2;
+  --zi-blobs: -1;
+
+//  Container
+
+  --container-width: 90rem;
+  --container-padding-x: 2rem;
+
+  @media (max-width: $screen-xs) {
+    --container-padding-x: 1.5rem;
+  }
+
+
+//  Transitions
+
+  --transition-ease-3ms: .3s ease;
+
+  @media (max-width: $screen-l) {
+    --html-font-size: 16px;
+  }
+}

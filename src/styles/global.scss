@@ -1,0 +1,93 @@
+@use "reset";
+@use "vars";
+
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap');
+
+html{
+   font-size: var(--html-font-size);
+}
+
+::selection{
+  background: var(--link-color);
+  color: var(--color-white);
+}
+
+
+body{
+  font-family: "Nunito Sans", sans-serif;
+  color: var(--color-white);
+  background: var(--bg-main);
+}
+
+.container{
+  max-width: calc(var(--container-width) + var(--container-padding-x) * 2);
+  width: 100%;
+  margin-inline: auto;
+  padding-inline: var(--container-padding-x);
+}
+
+.wrapper {
+  width: 100%;
+  min-height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.main{
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.title{
+  color: var(--color-white);
+  font-size: 2.25rem;
+  font-weight: 900;
+  line-height: 140%; 
+  letter-spacing: -0.8px;
+  text-align: center;
+
+  &--section{
+    margin-bottom: 4rem;
+  }
+}
+
+.subsection-title{
+  color: #CCC;
+  font-size: 2rem;
+  font-weight: 900;
+  line-height: 100%;
+  letter-spacing: -1.28px;
+}
+
+.subsection-subtitle{
+  color: #ADADAD;
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 140%; 
+  letter-spacing: -0.96px;
+}
+
+.content__icon{
+  max-width: 2rem;
+  aspect-ratio: 1/1;
+}
+
+.section{
+  margin-top: 6rem;
+  margin-bottom: 6rem;
+
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  align-items: center;
+}
+
+.no-scroll{
+  overflow: hidden;
+}
