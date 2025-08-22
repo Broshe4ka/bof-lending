@@ -27,6 +27,8 @@ body{
 }
 
 .wrapper {
+  position: relative;
+
   width: 100%;
   min-height: 100vh;
 
@@ -77,8 +79,9 @@ body{
 }
 
 .section{
-  margin-top: 6rem;
-  margin-bottom: 6rem;
+  position: relative;
+
+  padding-block: 6rem;
 
   width: 100%;
 
@@ -86,8 +89,15 @@ body{
   flex-direction: column;
   gap: 3rem;
   align-items: center;
+
+  overflow-x: hidden;
 }
 
 .no-scroll{
   overflow: hidden;
+}
+
+section{
+  position: relative;
+  overflow-x: hidden;
 }

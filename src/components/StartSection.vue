@@ -36,7 +36,7 @@ function copyToClipboard() {
 .home{
   position: relative;
 
-  height: 100vh;
+  height: 100svh;
 
   &__body{
     width: 100%;

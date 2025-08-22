@@ -5,11 +5,11 @@ import Accordion from './ui/Accordion.vue'
 </script>
 
 <template>
-  <section class="section container">
+  <section class="section">
     <h2 class="title">
       У вас остались вопросы?
     </h2>
-    <div class="faq">
+    <div class="faq container">
       <Accordion
         v-for="item in faqData"
         :key="item.id"

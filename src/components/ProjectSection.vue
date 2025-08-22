@@ -30,6 +30,8 @@ import Slider from './Slider.vue'
         :image="data.image"
       />
     </div>
+    <!--    <Blob style="left: calc(var(&#45;&#45;blob-size) / -2); top: 5%" /> -->
+    <!--    <Blob style="right: calc(var(&#45;&#45;blob-size) / -2); bottom: 0" /> -->
   </section>
 </template>
 

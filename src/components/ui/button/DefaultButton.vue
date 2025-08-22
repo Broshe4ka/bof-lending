@@ -14,8 +14,10 @@ const buttonProps = defineProps<{
 <style scoped lang="scss">
 .button{
     --button-text: #3D3D3D;
+    --button-text-active: #CCCCCC;
     --button-bg: var(--color-white);
-    --button-bg-hovered: transparent;
+    --button-bg-hover: #E2E2E2;
+    --button-bg-active: #8B8B8B;
 
     padding: 0.625rem 1rem;
 
@@ -40,8 +42,13 @@ const buttonProps = defineProps<{
     z-index: var(--zi-low);
 
     &:hover{
-
-      background-color: var(--button-bg-hovered);
+      background-color: var(--button-bg-hover);
     }
+
+    &:active{
+      color: var(--button-text-active);
+      background-color: var(--button-bg-active);
+    }
+
   }
 </style>
