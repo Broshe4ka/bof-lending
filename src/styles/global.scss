@@ -29,6 +29,8 @@ body{
 .wrapper {
   position: relative;
 
+  overflow-x: hidden;
+
   width: 100%;
   min-height: 100vh;
 
@@ -95,9 +97,4 @@ body{
 
 .no-scroll{
   overflow: hidden;
-}
-
-section{
-  position: relative;
-  overflow-x: hidden;
 }
