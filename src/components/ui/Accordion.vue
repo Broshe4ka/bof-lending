@@ -77,6 +77,8 @@ function toggleAccord() {
     cursor: pointer;
 
     user-select: none;
+    -webkit-tap-highlight-color: transparent;
+
   }
 
   &__title {
