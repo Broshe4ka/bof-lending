@@ -9,7 +9,7 @@ const sliderProps = defineProps<{
   images: Array<string>
 }>()
 
-const [emblaRef, emblaApi] = emblaCarouselVue({ loop: true })
+const [emblaRef] = emblaCarouselVue({ loop: true })
 
 // onMounted(() => {
 //   if (emblaApi.value) {
