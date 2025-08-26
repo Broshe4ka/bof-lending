@@ -10,12 +10,6 @@ const sliderProps = defineProps<{
 }>()
 
 const [emblaRef] = emblaCarouselVue({ loop: true })
-
-// onMounted(() => {
-//   if (emblaApi.value) {
-//     console.log(emblaApi.value.slideNodes())
-//   }
-// })
 </script>
 
 <template>

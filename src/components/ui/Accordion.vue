@@ -43,7 +43,7 @@ function toggleAccord() {
     --faq-bg: #171717;
     --faq-bg-open: #1B1B1B;
 
-    padding: .75rem 1rem;
+    padding-inline: 1rem;
 
     display: flex;
     flex-direction: column;
@@ -80,6 +80,7 @@ function toggleAccord() {
   }
 
   &__title {
+    padding-block: .75rem;
     color: #CCC;
   }
 
@@ -101,11 +102,16 @@ function toggleAccord() {
 
     p{
       overflow: hidden;
-      padding-top: 1rem;
+      transition: padding-top var(--transition-ease-3ms);
     }
 
     &.open {
       grid-template-rows: 1fr;
+    }
+
+    &.open p{
+      padding-top: .25rem;
+      padding-bottom: .75rem;
     }
   }
   a{
