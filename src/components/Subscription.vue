@@ -24,7 +24,7 @@ const subProps = defineProps<{
             {{ subProps.price }} ₽ / сезон
           </h4>
           <ul class="sub__list">
-            <li v-for="feature in featureList" :key="feature.length">
+            <li v-for="(feature, index) in featureList" :key="index">
               <p>{{ feature }}</p>
             </li>
           </ul>

@@ -15,14 +15,23 @@ function toggleAccord() {
 </script>
 
 <template>
-  <div class="faq__item" :class="{ open: isOpen }">
-    <div class="faq__header" @click="toggleAccord">
+  <div
+    class="faq__item"
+    :class="{ open: isOpen }"
+  >
+    <div
+      class="faq__header"
+      @click="toggleAccord"
+    >
       <h3 class="faq__title">
         {{ accordionProps.question }}
       </h3>
       <span class="faq__icon">{{ isOpen ? '-' : '+' }}</span>
     </div>
-    <div class="faq__body" :class="{ open: isOpen }">
+    <div
+      class="faq__body"
+      :class="{ open: isOpen }"
+    >
       <p v-html="accordionProps.answer" />
     </div>
   </div>

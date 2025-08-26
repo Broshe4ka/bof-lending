@@ -1,6 +1,5 @@
 <script setup lang="ts">
 import emblaCarouselVue from 'embla-carousel-vue'
-import { onMounted } from 'vue'
 
 const sliderProps = defineProps<{
   id: number
@@ -12,11 +11,11 @@ const sliderProps = defineProps<{
 
 const [emblaRef, emblaApi] = emblaCarouselVue({ loop: true })
 
-onMounted(() => {
-  if (emblaApi.value) {
-    console.log(emblaApi.value.slideNodes())
-  }
-})
+// onMounted(() => {
+//   if (emblaApi.value) {
+//     console.log(emblaApi.value.slideNodes())
+//   }
+// })
 </script>
 
 <template>
@@ -34,7 +33,13 @@ onMounted(() => {
     </div>
     <div ref="emblaRef" class="embla slider__body">
       <div class="embla__container">
-        <img v-for="image in sliderProps.images" :key="image.length" :src="image" alt="" class="embla__slide">
+        <img
+          v-for="(image, index) in sliderProps.images"
+          :key="index"
+          :src="image"
+          alt=""
+          class="embla__slide"
+        >
       </div>
     </div>
   </section>

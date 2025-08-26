@@ -10,11 +10,25 @@ const menuProps = defineProps<{
   <div class="hover-menu">
     <div class="hover-menu__title">
       <p>Наши ресурсы</p>
-      <img src="/icons/select.svg" alt="Select arrow" class="title__image">
+      <img
+        src="/icons/select.svg"
+        alt="Select arrow"
+        class="title__image"
+      >
       <ul class="hover-menu__links">
-        <li v-for="link in menuProps.links" :key="link.id">
-          <a :href="link.url" class="link">
-            <img :src="link.icon" :alt="link.name" class="link__icon">
+        <li
+          v-for="link in menuProps.links"
+          :key="link.id"
+        >
+          <a
+            :href="link.url"
+            class="link"
+          >
+            <img
+              :src="link.icon"
+              :alt="link.name"
+              class="link__icon"
+            >
             <p>{{ link.name }}</p>
           </a>
         </li>
@@ -25,10 +39,12 @@ const menuProps = defineProps<{
 
 <style scoped lang="scss">
 .hover-menu{
+  --gap: .25rem;
+
   position: relative;
   display: flex;
   flex-direction: column;
-  gap: 0.5rem;
+  gap: var(--gap);
 
   &__title{
 
@@ -40,9 +56,15 @@ const menuProps = defineProps<{
     border-radius: 0.75rem;
     transition: background var(--transition-ease-3ms);
 
+    cursor: pointer;
+
     &:hover {
       background: var(--link-bg);
     }
+    &:hover .title__image{
+      transform: rotate(180deg);
+    }
+
   }
   &__links{
     position: absolute;
@@ -51,11 +73,11 @@ const menuProps = defineProps<{
 
     width: 100%;
 
-    padding-top: 1rem;
+    padding-top: var(--gap);
 
     display: flex;
     flex-direction: column;
-    gap: 0.25rem;
+    gap: var(--gap);
 
     visibility: hidden;
     opacity: 0;
@@ -103,6 +125,8 @@ const menuProps = defineProps<{
 
 .title__image{
   width: 1rem;
+
+  transition: transform var(--transition-ease-3ms);
 }
 
 .hover-menu__title:hover .hover-menu__links{

@@ -22,8 +22,14 @@ function toggleBurger() {
     <div class="header__body container">
       <Logo />
       <ul class="links">
-        <li v-for="data in navData" :key="data.id">
-          <a :href="data.url" class="link">{{ data.name }}</a>
+        <li
+          v-for="data in navData"
+          :key="data.id"
+        >
+          <a
+            :href="data.url"
+            class="link"
+          >{{ data.name }}</a>
         </li>
         <li>
           <HoverMenu
@@ -82,11 +88,6 @@ function toggleBurger() {
   align-items: center;
   gap: 1rem;
 
-  font-weight: 600;
-  line-height: 100%;
-  letter-spacing: -0.32px;
-  text-align: center;
-
   @media (max-width: 992px) {
     display: none;
   }
@@ -96,6 +97,10 @@ function toggleBurger() {
   padding: .5rem 0.75rem;
 
   border-radius: .75rem;
+
+  font-weight: 600;
+  letter-spacing: -0.32px;
+  text-align: center;
 
   transition: background var(--transition-ease-3ms);
 

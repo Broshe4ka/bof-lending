@@ -14,7 +14,7 @@
   display: flex;
   align-items: center;
   gap: 0.525rem;
-  //
+
   //&__image{
   //}
 

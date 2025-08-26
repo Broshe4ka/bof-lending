@@ -50,3 +50,9 @@ export interface FaqDataProps {
   question: string
   answer: string
 }
+
+export interface licenseDataProps {
+  id: number
+  name: string
+  url: string
+}

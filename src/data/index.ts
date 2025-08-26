@@ -194,3 +194,22 @@ export const faqData = [
       '<strong>Конечно!</strong> Но для начала напишите <a href="https://twitch.tv/tvoyyoy">админу</a> свой ник :^) ',
   },
 ]
+
+export const licenseData = [
+  {
+    id: 1,
+    name: 'Политика конфиденциальности',
+    url: '#1',
+  },
+  {
+    id: 2,
+    name: 'Пользовательское соглашение',
+    url: '#2',
+  },
+  {
+    id: 3,
+    name: 'Правила проекта',
+    url: '#3',
+  },
+
+]

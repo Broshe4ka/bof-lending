@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import { licenseData } from '../../../data'
 import Logo from '../Logo.vue'
 </script>
 
@@ -8,9 +9,14 @@ import Logo from '../Logo.vue'
       <div class="footer__links">
         <Logo />
         <ul class="links">
-          <li><a href="#" class="link">Политика конфиденциальности</a></li>
-          <li><a href="#" class="link">Пользовательское соглашение</a></li>
-          <li><a href="#" class="link">Правила проекта</a></li>
+          <li v-for="data in licenseData" :key="data.id">
+            <a
+              :href="data.url"
+              class="link"
+            >
+              {{ data.name }}
+            </a>
+          </li>
         </ul>
         <ul class="socials">
           <li>
@@ -103,7 +109,7 @@ import Logo from '../Logo.vue'
     text-align: center;
     padding: .5rem 0;
 
-    font-size: 12px;
+    font-size: 0.75rem;
     font-weight: 500;
     line-height: 140%;
     letter-spacing: -0.48px;

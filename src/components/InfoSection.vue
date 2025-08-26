@@ -12,7 +12,11 @@ const infoProps = defineProps<{
 <template>
   <section class="info container">
     <div class="info__content">
-      <img :src="infoProps.icon" alt="Section icon" class="content__icon">
+      <img
+        :src="infoProps.icon"
+        alt="Section icon"
+        class="content__icon"
+      >
       <div class="content__text">
         <h2 class="subsection-title">
           {{ infoProps.title }}
@@ -20,14 +24,22 @@ const infoProps = defineProps<{
         <h3 class="subsection-subtitle">
           {{ infoProps.subtitle }}
         </h3>
-        <ul v-for="item in infoProps.text" :key="item.length" class="info__list">
+        <ul
+          v-for="(item, index) in infoProps.text"
+          :key="index"
+          class="info__list"
+        >
           <li>
             <p v-html="item" />
           </li>
         </ul>
       </div>
     </div>
-    <img :src="infoProps.image" alt="" class="info__img">
+    <img
+      :src="infoProps.image"
+      alt=""
+      class="info__img"
+    >
   </section>
 </template>
 

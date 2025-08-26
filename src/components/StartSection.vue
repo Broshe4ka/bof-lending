@@ -1,10 +1,6 @@
 <script setup lang="ts">
+import CopyButton from './ui/button/CopyButton.vue'
 import DefaultButton from './ui/button/DefaultButton.vue'
-import TransparentButton from './ui/button/TransparentButton.vue'
-
-function copyToClipboard() {
-
-}
 </script>
 
 <template>
@@ -19,15 +15,25 @@ function copyToClipboard() {
       </p>
       <div class="buttons">
         <div class="buttons__group">
-          <DefaultButton link="#" text="Подробнее" />
-          <TransparentButton :on-click-function="copyToClipboard" text="Копировать IP" />
+          <DefaultButton
+            link="#"
+            text="Подробнее"
+          />
+          <CopyButton
+            text="Копировать IP"
+            clip-text="192.108.101.1"
+          />
         </div>
         <p class="buttons__description">
           Версия игры: Java Edition 1.21.4
         </p>
       </div>
     </div>
-    <img src="/images/bg.webp" alt="" class="home__image">
+    <img
+      src="/images/bg.webp"
+      alt=""
+      class="home__image"
+    >
     <div class="home__gradient" />
   </section>
 </template>
